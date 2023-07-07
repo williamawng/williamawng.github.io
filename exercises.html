@@ -90,6 +90,7 @@
             document.getElementById('William').innerHTML = ""
             document.getElementById('Awng').innerHTML = ""
             document.getElementById('MyoLatt').innerHTML = ""
+            document.getElementById('Sai').innerHTML = ""
         }
 
         function draw() {
@@ -111,6 +112,16 @@
                 text += "<br/>"
             }
             document.getElementById('MyoLatt').innerHTML = text
+        }
+        function draw_rectangle() {
+            let text = ""
+            for (let i = 0; i < 4; i++) {
+                for (let j = 0; j < 5; j++) {
+                    text += "*" 
+                }
+                text += "<br/>"
+            }
+            document.getElementById('Sai').innerHTML = text
         }
     </script>
     <body>
@@ -162,28 +173,28 @@
         <a href="dontclick.txt">Please Click Me</a>
         <div>
             <button onclick="runMe()">
-                run
+                Random letters and symbols
             </button>
             <button onclick="clearMe()">clear</button>
         </div>
-        <div id="William">
-
-        </div>
+        <div id="William"></div>
         <div>
             <button onclick="draw()">
-                draw
+                Draw a Triangle
             </button>
         </div>
-        <div id="Awng">
-
-        </div>
+        <div id="Awng"></div>
         <div>
             <button onclick="draw2()">
-                draw2
+                Draw a Triangle 2
             </button>
         </div>
-        <div id="MyoLatt">
-
+        <div id="MyoLatt"></div>
+        <div>
+            <button onclick="draw_rectangle()">
+                Draw a rectangle
+            </button>
         </div>
+        <div id="Sai"></div>
     </body>
 </html>
