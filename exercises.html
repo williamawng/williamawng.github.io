@@ -91,6 +91,7 @@
             document.getElementById('Awng').innerHTML = ""
             document.getElementById('MyoLatt').innerHTML = ""
             document.getElementById('Sai').innerHTML = ""
+            document.getElementById('Moe').innerHTML = ""
         }
 
         function draw() {
@@ -122,6 +123,18 @@
                 text += "<br/>"
             }
             document.getElementById('Sai').innerHTML = text
+        }
+        function draw_pyramid() {
+            let text = ""
+            for (let i = 0; i < 4; i++) {
+                for (let j = 0; j < 7; j++) {
+                    for (let k = 0; k < 7; k++) {
+                        text += "*"
+                    }
+                }
+                text += "<br/>"
+            }
+            document.getElementById('Moe').innerHTML = text
         }
     </script>
     <body>
@@ -196,5 +209,11 @@
             </button>
         </div>
         <div id="Sai"></div>
+        <div>
+            <button onclick="draw_pyramid()">
+                Draw a pyramid
+            </button>
+        </div>
+        <div id="Moe"></div>
     </body>
 </html>
