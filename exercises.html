@@ -21,63 +21,51 @@
     <script>
         function add() {
             let x = document.getElementById("x").value
-            alert(x)
-            x = parseInt(x)
+            x = parseFloat(x)
             let y = document.getElementById("y").value
-            alert(y)
-            y = parseInt(y)
+            y = parseFloat(y)
             let result = x + y
-            alert(result)
+            document.getElementById("result").value = result
         }
         function multiply() {
             let x = document.getElementById("x").value
-            alert(x)
-            x = parseInt(x)
+            x = parseFloat(x)
             let y = document.getElementById("y").value
-            alert(y)
-            y = parseInt(y)
+            y = parseFloat(y)
             let result = x * y
-            alert(result)
+            document.getElementById("result").value = result
         }
         function divide() {
             let x = document.getElementById("x").value
-            alert(x)
-            x = parseInt(x)
+            x = parseFloat(x)
             let y = document.getElementById("y").value
-            alert(y)
-            y = parseInt(y)
+            y = parseFloat(y)
             let result = x / y
-            alert(result)
+            document.getElementById("result").value = result
         }
         function subtract() {
             let x = document.getElementById("x").value
-            alert(x)
-            x = parseInt(x)
+            x = parseFloat(x)
             let y = document.getElementById("y").value
-            alert(y)
-            y = parseInt(y)
+            y = parseFloat(y)
             let result = x - y
-            alert(result)
+            document.getElementById("result").value = result
         }
         function powerof() {
             let x = document.getElementById("x").value
-            alert(x)
-            x = parseInt(x)
+            x = parseFloat(x)
             let y = document.getElementById("y").value
-            alert(y)
-            y = parseInt(y)
+            y = parseFloat(y)
             let result = x ** y
-            alert(result)
+            document.getElementById("result").value = result
         }
         function root() {
             let x = document.getElementById("x").value
-            alert(x)
-            x = parseInt(x)
+            x = parseFloat(x)
             let y = document.getElementById("y").value
-            alert(y)
-            y = parseInt(y)
+            y = parseFloat(y)
             let result = x ** (1/y)
-            alert(result)
+            document.getElementById("result").value = result
         }
         function runMe() {
             let text = ""
@@ -167,13 +155,15 @@
         <p>
             Random Calculator I made.
         </p>
-        <form >
+        <p>
             <label for="x">X:</label><br>
             <input type="text" id="x" name="x" value=""><br>
             <label for="y">Y:</label><br>
-            <input type="text" id="y" name="y" value=""><br><br>
+            <input type="text" id="y" name="y" value=""><br>
+            <label for="result">Result:</label><br>
+            <input type="text" id="result" name="result" value=""><br>
             
-        </form>
+        </p>
         <button onclick="add()">Add</button>
         <button onclick="multiply()">Multiply</button>
         <button onclick="divide()">Divide</button>
