@@ -111,6 +111,27 @@
             }
             document.getElementById('Moe').innerHTML = text
         }
+        function luck() {
+            let l = document.getElementById("lott").value;
+            l = parseFloat(l);
+            let m = document.getElementById("lott2").value;
+            m = parseFloat(m);
+            let winning_number = 96;
+            let winning_number2 = 54;
+            let message = "Sorry You Didn't Win...";
+            if (l == winning_number && m == winning_number2) {
+                message = "YOU WON THE LOTTERY!!!!!!! HOW...";
+            }
+            else if (l == winning_number || m == winning_number2) {
+                if (l == winning_number) {
+                    message = "You have gotton 1 number right and it is " + winning_number;
+                }
+                else if (m == winning_number2) {
+                    message = "You have gotten 1 number right and it is " + winning_number2;
+                }
+            }
+            document.getElementById("lott_result").innerHTML = message;
+        }
     </script>
     <body>
         <h1 class="my_title">
@@ -118,7 +139,8 @@
         </h1>
         <p class="menu">
             <a href="index.html">Home</a> |
-            <a href="exercises.html">Programs</a>
+            <a href="exercises.html">Programs</a> |
+            <a href="pictures.html">Photos</a>
         </p>
         <p>
             Hello World! My name is William.
@@ -199,5 +221,16 @@
             </button>
         </div>
         <div id="Moe"></div>
+        <p>
+            <label for="lott">Lottery:</label><br>
+            <input type="text" id="lott" name="lott" value="">
+            <input type="text" id="lott2" name="lott2" value="">
+        </p>
+        <p>
+            <button onclick="luck()">Enter lottery</button>
+        </p>
+        <p>
+            <div id = 'lott_result'>Try your luck. Pick a number between 1-100.</div>
+        </p>
     </body>
 </html>
