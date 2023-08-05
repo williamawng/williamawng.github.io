@@ -73,7 +73,7 @@
             let text = ""
             for (let i = 0; i <= 10; i++) {
                 for (let j = i; j < 10; j++) {
-                    text += "*" 
+                    text += "*"
                 }
                 text += "<br/>"
             }
@@ -83,7 +83,7 @@
             let text = ""
             for (let i = 10; i >= 0; i--) {
                 for (let j = i; j < 10; j++) {
-                    text += "*" 
+                    text += "*"
                 }
                 text += "<br/>"
             }
@@ -93,7 +93,7 @@
             let text = ""
             for (let i = 0; i < 4; i++) {
                 for (let j = 0; j < 5; j++) {
-                    text += "*" 
+                    text += "*"
                 }
                 text += "<br/>"
             }
@@ -103,9 +103,12 @@
             let text = ""
             for (let i = 0; i < 4; i++) {
                 for (let j = 0; j < 7; j++) {
-                    for (let k = 0; k < 7; k++) {
-                        text += "*"
-                    }
+                        if (i == 1 && j == 5) {
+                            text = "*"
+                        }
+                        else if (i == 1 && j => 5) {
+                            text = ""
+                        }
                 }
                 text += "<br/>"
             }
@@ -176,7 +179,7 @@
             <input type="text" id="y" name="y" value=""><br>
             <label for="result">Result:</label><br>
             <input type="text" id="result" name="result" value=""><br>
-            
+
         </p>
         <button onclick="add()">Add</button>
         <button onclick="multiply()">Multiply</button>
