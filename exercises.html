@@ -103,13 +103,20 @@
             let text = ""
             for (let i = 0; i < 4; i++) {
                 for (let j = 0; j < 7; j++) {
-                        if (i == 1 && j == 5) {
+                        if (i == 0 && j == 4) {
                             text += "*"
                         }
-                        else if (i == 2 && j == 3) {
+                        else if (i == 1 && (j == 2 || j == 4)) {
                             text += "*"
                         }
-                        else text += " "
+                        else if (i == 2 && (j == 1 || j == 3 || j == 5)) {
+                            text += "*"
+                        }
+                        else if (i == 3 && (j == 0 || j == 2 || j == 4 || j == 6) ) {
+                            text += "*"
+                        }
+
+                        else text += "&nbsp;"
                 }
                 text += "<br/>"
             }
