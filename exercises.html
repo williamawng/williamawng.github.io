@@ -67,6 +67,7 @@
             document.getElementById('MyoLatt').innerHTML = ""
             document.getElementById('Sai').innerHTML = ""
             document.getElementById('Moe').innerHTML = ""
+            document.getElementById('Ja').innerHTML = ""
         }
 
         function draw() {
@@ -145,6 +146,16 @@
                 message = "Sorry You Didn't Win... and the winning numbers are " + winning_number + " and " + winning_number2;
             }
             document.getElementById("lott_result").innerHTML = message;
+        }
+        function draw_with_while() {
+            let text = ""
+            let i = 0
+            while (i < 7) {
+                text += "&spades; &clubs; &hearts; &diams;"
+                i++;
+                text += "<br/>"
+            }
+            document.getElementById('Ja').innerHTML = text
         }
     </script>
     <body>
@@ -237,7 +248,7 @@
         </div>
         <div id="Moe"></div>
         <div>
-            <button onclick="draw_pyramid()">
+            <button onclick="draw_with_while()">
                 Printing with while
             </button>
         </div>
