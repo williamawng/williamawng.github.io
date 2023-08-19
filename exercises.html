@@ -127,19 +127,22 @@
             l = parseFloat(l);
             let m = document.getElementById("lott2").value;
             m = parseFloat(m);
-            let winning_number = 96;
-            let winning_number2 = 54;
+            let winning_number = Math.floor(Math.random() * 10); // Returns a random integer from 0 to 9:
+            let winning_number2 = Math.floor(Math.random() * 10); // Returns a random integer from 0 to 9:
             let message = "Sorry You Didn't Win...";
-            if (l == winning_number && m == winning_number2) {
+            if ((l == winning_number && m == winning_number2) || (l == winning_number2 && m == winning_number)) {
                 message = "YOU WON THE LOTTERY!!!!!!! HOW...";
             }
-            else if (l == winning_number || m == winning_number2) {
-                if (l == winning_number) {
+            else if (l == winning_number || m == winning_number2 || l == winning_number2 || m == winning_number) {
+                if (l == winning_number || m == winning_number) {
                     message = "You have gotton 1 number right and it is " + winning_number;
                 }
-                else if (m == winning_number2) {
+                else if (m == winning_number2 || l == winning_number2) {
                     message = "You have gotten 1 number right and it is " + winning_number2;
                 }
+            }
+            else {
+                message = "Sorry You Didn't Win... and the winning numbers are " + winning_number + " and " + winning_number2;
             }
             document.getElementById("lott_result").innerHTML = message;
         }
@@ -233,6 +236,12 @@
             </button>
         </div>
         <div id="Moe"></div>
+        <div>
+            <button onclick="draw_pyramid()">
+                Printing with while
+            </button>
+        </div>
+        <div id="Ja"></div>
         <p>
             <label for="lott">Lottery:</label><br>
             <input type="text" id="lott" name="lott" value="">
@@ -242,7 +251,7 @@
             <button onclick="luck()">Enter lottery</button>
         </p>
         <p>
-            <div id = 'lott_result'>Try your luck. Pick a number between 1-100.</div>
+            <div id = 'lott_result'>Try your luck. Pick a number between 0-9.</div>
         </p>
     </body>
 </html>
