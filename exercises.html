@@ -68,6 +68,7 @@
             document.getElementById('Sai').innerHTML = ""
             document.getElementById('Moe').innerHTML = ""
             document.getElementById('Ja').innerHTML = ""
+            document.getElementById('Seng').innerHTML = ""
         }
 
         function draw() {
@@ -123,6 +124,29 @@
             }
             document.getElementById('Moe').innerHTML = text
         }
+        function draw_pyramid2() {
+            let text = ""
+            for (let i = 0; i < 4; i++) {
+                for (let j = 0; j < 7; j++) {
+                        if (i == 0 && (j == 0 || j == 2 || j == 4 || j == 6) ) {
+                            text += "*"
+                        }
+                        else if (i == 1 && (j == 1 || j == 3 || j == 5)) {
+                            text += "*"
+                        }
+                        else if (i == 2 && (j == 2 || j == 4) ) {
+                            text += "*"
+                        }
+                        else if (i == 3 && j == 4) {
+                            text += "*"
+                        }
+
+                        else text += "&nbsp;"
+                }
+                text += "<br/>"
+            }
+            document.getElementById('Ja').innerHTML = text
+        }
         function luck() {
             let l = document.getElementById("lott").value;
             l = parseFloat(l);
@@ -155,7 +179,7 @@
                 i++;
                 text += "<br/>"
             }
-            document.getElementById('Ja').innerHTML = text
+            document.getElementById('Seng').innerHTML = text
         }
     </script>
     <body>
@@ -248,11 +272,17 @@
         </div>
         <div id="Moe"></div>
         <div>
+            <button onclick="draw_pyramid2()">
+                Draw a pyramid 2
+            </button>
+        </div>
+        <div id="Ja"></div>
+        <div>
             <button onclick="draw_with_while()">
                 Printing with while
             </button>
         </div>
-        <div id="Ja"></div>
+        <div id="Seng"></div>
         <p>
             <label for="lott">Lottery:</label><br>
             <input type="text" id="lott" name="lott" value="">
