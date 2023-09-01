@@ -68,12 +68,6 @@
             let result2 = -z
             document.getElementById("result2").value = result2
         }
-        function not_negation() {
-            let z = document.getElementById("z").value
-            z = parseFloat(z)
-            let result2 = z * -1
-            document.getElementById("result2").value = result2
-        }
         function runMe() {
             let text = ""
             for (let i = 0; i <= 300; i++) {
@@ -210,6 +204,7 @@
             <a href="index.html">Home</a> |
             <a href="exercises.html">Programs</a> |
             <a href="pictures.html">Photos</a> |
+            <a href="game.html">Games</a> |
             <a href="https://github.com/williamawng">My Github</a> |
         </p>
         <p>
@@ -239,9 +234,6 @@
         <p>
             Random Calculator I made.
         </p>
-        <h10>
-            Remainder only works if x is bigger than y.
-        </h10>
         <p>
             <label for="x">X:</label><br>
             <input type="text" id="x" name="x" value=""><br>
@@ -258,9 +250,6 @@
         <button onclick="powerof()">Powerof</button>
         <button onclick="root()">Root</button>
         <button onclick="remainder()">Remainder</button><br><br>
-        <h10>
-            You have to put a negative number for the Not Negate function to work.
-        </h10>
         <p>
             <label for="z">Z:</label><br>
             <input type="text" id="z" name="z" value=""><br>
@@ -268,8 +257,7 @@
             <input type="text" id="result2" name="result2" value=""><br>
 
         </p>
-        <button onclick="negation()">Negate</button>
-        <button onclick="not_negation()">Not Negate</button>
+        <button onclick="negation()">Negate/Not Negate</button>
         <p onclick="alert('Not Me, Below Me.')">
             I dare you to click the link below. ;)
         </p>
