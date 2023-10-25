@@ -83,6 +83,7 @@
             document.getElementById('Moe').innerHTML = ""
             document.getElementById('Ja').innerHTML = ""
             document.getElementById('Seng').innerHTML = ""
+            document.getElementById('Cecilia').innerHTML = ""
         }
 
         function draw() {
@@ -194,6 +195,31 @@
                 text += "<br/>"
             }
             document.getElementById('Seng').innerHTML = text
+        }
+        function draw_hexagon() {
+            let text = ""
+            for (let i = 0; i < 4; i++) {
+                console.log("i:" + i)
+                for (let j = 0; j < 5; j++) {
+                    console.log("j:" + j)
+                    if (i == 0 && (j == 1 || j == 2 || j == 3) ) {
+                        text += "*"
+                    }
+                    else if (i == 1 && (j == 0 || j == 1 || j == 2 || j == 3 || j == 4) ) {
+                        text += "*"
+                    }
+                    else if (i == 2 && (j == 0 || j == 1 || j == 2 || j == 3 || j == 4) ) {
+                        text += "*"
+                    }
+                    else if (i == 3 && (j == 1 || j == 2 || j == 3) ) {
+                        text += "*"
+                    }
+
+                    else text += "&nbsp;"
+                }
+                text += "<br/>"
+            }
+            document.getElementById('Cecilia').innerHTML = text
         }
     </script>
     <body>
@@ -307,6 +333,11 @@
             </button>
         </div>
         <div id="Seng"></div>
+        <button onclick="draw_hexagon()">
+            Draw a hexagon
+        </button>
+        </div>
+        <div id="Cecilia"></div>
         <p>
             <label for="lott">Lottery:</label><br>
             <input type="text" id="lott" name="lott" value="">
